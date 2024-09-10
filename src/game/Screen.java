@@ -5,18 +5,41 @@ import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class Screen {
 
 	public void execute() {
 
-		JLabel label = new JLabel();
-		label.setSize(600, 100);
-		label.setText("Jogo da senha ");
-		label.setLocation(0, 0);
-		label.setFont(new Font("", Font.BOLD, 30));
-		label.setHorizontalAlignment(0);
-
+		JLabel titleLabel = new JLabel();
+		titleLabel.setSize(600, 100);
+		titleLabel.setText("Jogo da senha ");
+		titleLabel.setLocation(0, 0);
+		titleLabel.setFont(new Font("", Font.BOLD, 30));
+		titleLabel.setHorizontalAlignment(0);
+		
+		JLabel helpLabel = new JLabel();
+		helpLabel.setSize(600, 100);
+		helpLabel.setText("'X', não tem essa cor");
+		helpLabel.setLocation(420, 100);
+		helpLabel.setFont(new Font("", Font.BOLD, 18));
+		helpLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		
+		JLabel helpLabel1 = new JLabel();
+		helpLabel1.setSize(600, 100);
+		helpLabel1.setText("'O', cor no lugar errado");
+		helpLabel1.setLocation(420, 150);
+		helpLabel1.setFont(new Font("", Font.BOLD,18));
+		helpLabel1.setHorizontalAlignment(SwingConstants.LEFT);
+		
+		JLabel helpLabel2 = new JLabel();
+		helpLabel2.setSize(600, 100);
+		helpLabel2.setText("'  ' acerto ");
+		helpLabel2.setLocation(420, 200);
+		helpLabel2.setFont(new Font("", Font.BOLD, 18));
+		helpLabel2.setHorizontalAlignment(SwingConstants.LEFT);
+		
+		
 		JFrame screen = new JFrame();
 		screen.setLayout(null);
 		screen.setSize(640, 750);
@@ -41,8 +64,14 @@ public class Screen {
 		}
 
 		screen.add(verifyButton);
+		
+		screen.add(helpLabel);
+		screen.add(helpLabel1);
+		screen.add(helpLabel2);
 
-		screen.add(label);
+		
+
+		screen.add(titleLabel);
 
 		screen.setVisible(true);
 	}
